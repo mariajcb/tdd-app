@@ -5,12 +5,16 @@ import UserProfile from '@/components/UserProfile'
 
 describe('UserView', () => {
   const build = () => {
-    const wrapper = shallowMount(UserView)
+    const wrapper = shallowMount(UserView, {
+      data: () => ({
+        user: {}
+      })
+    })
 
     return {
       wrapper,
-      const userSearchForm: () => wrapper.find(UserSearchForm),
-      const userProfile: () => wrapper.find(UserProfile)
+      userSearchForm: () => wrapper.find(UserSearchForm),
+      userProfile: () => wrapper.find(UserProfile)
     }
   }
   it('renders the component', () => {
@@ -24,7 +28,20 @@ describe('UserView', () => {
     //arrange
     const { userSearchForm, userProfile} = build()
     //assert
-    expect(userSearchForm.exists()).toBe(true)
-    expect(userProfile.exists()).toBe(true)
+    expect(userSearchForm().exists()).toBe(true)
+    expect(userProfile().exists()).toBe(true)
+  })
+
+  it('passes binded user prop to user profile component', () => {
+    //arrange
+    const { wrapper, userProfile } = build()
+    wrapper.setData({
+      user: {
+        name: 'Daniel'
+      }
+    })
+
+    //assert
+    expect(userProfile().vm.user).toBe(wrapper.vm.user)
   })
 })
