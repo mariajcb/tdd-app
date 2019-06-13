@@ -1,9 +1,16 @@
 <template lang="html">
-  <div>hello world!</div>
+  <div>hello world!
+    <UserSearchForm />
+    <UserProfile />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'UserView'
+  name: 'UserView',
+  components: {
+    UserSearchForm,
+    UserProfile,
+  }
 }
 </script>
