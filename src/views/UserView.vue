@@ -1,26 +1,30 @@
 <template lang="html">
   <div>hello world!
-    <UserSearchForm />
+    <UserSearchForm @submitted="searchUser"/>
     <UserProfile :user="user" />
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import UserSearchForm from '@/components/UserSearchForm'
 import UserProfile from '@/components/UserProfile'
 
 export default {
-  data() {
-    return {
-      user: {
-        name: ''
-      }
-    }
-  },
   name: 'UserView',
   components: {
     UserSearchForm,
     UserProfile,
+  },
+  computed: {
+    ...mapState({
+      user: 'user',
+    })
+  },
+  methods: {
+    searchUser(username) {
+      this.$store.dispatch('SEARCH_USER', { username })
+    }
   }
 }
 </script>
