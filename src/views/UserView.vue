@@ -1,11 +1,12 @@
 <template lang="html">
-  <div>hello world!
+  <div>
     <UserSearchForm @submitted="searchUser"/>
     <UserProfile :user="user" />
   </div>
 </template>
 
 <script>
+
 import { mapState } from 'vuex'
 import UserSearchForm from '@/components/UserSearchForm'
 import UserProfile from '@/components/UserProfile'

@@ -17,7 +17,7 @@ describe('UserView', () => {
   const build = () => {
     const wrapper = shallowMount(UserView, {
       localVue,
-      store: new Vuex.Store({ state })
+      store: new Vuex.Store({ state, actions })
     })
 
     return {
