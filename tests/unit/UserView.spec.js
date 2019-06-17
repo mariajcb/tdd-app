@@ -35,6 +35,7 @@ describe('UserView', () => {
   it('renders the component', () => {
     //arrange
     const { wrapper } = build()
+
     //assert
     expect(wrapper.html()).toMatchSnapshot()
   })
@@ -42,6 +43,7 @@ describe('UserView', () => {
   it('renders main child components', () => {
     //arrange
     const { userSearchForm, userProfile} = build()
+
     //assert
     expect(userSearchForm().exists()).toBe(true)
     expect(userProfile().exists()).toBe(true)
