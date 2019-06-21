@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": ""mariajcb-"tdd-app",
+  "name": "mariajcb-tdd-app",
   "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "routes": [
     { "src": "^/js/(.*)", "dest": "/js/$1" },
