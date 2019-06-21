@@ -21,8 +21,7 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Type Github account name into search bar
-Account's avatar image and bio will appear:
-![Example Image](**https://tinyurl.com/y4y9vswg**)
+Account's avatar image and bio will appear
 
 
 ## Tests
