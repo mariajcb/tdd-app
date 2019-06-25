@@ -129,7 +129,7 @@ Deployed with [ZEIT Now](https://zeit.co/docs/v2/getting-started/introduction-to
 * [Vue CLI 3]([https://cli.vuejs.org/](https://cli.vuejs.org/)) - created template with support for Babel, PWA, Router, Vuex, Linter, Unit Testing
 * [Element]([https://element.eleme.io/#/en-US](https://element.eleme.io/#/en-US)) - Vue-based component library
 * [Jest]([https://jestjs.io/](https://jestjs.io/)) - Unit Testing
-* [Axios]([https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)) -promise-based http client
+* [Axios]([https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)) - promise-based http client
 * [Flush Promises]([https://www.npmjs.com/package/flush-promises](https://www.npmjs.com/package/flush-promises)])- guarantees that all the promises will be solved
 * [Nock]([https://www.npmjs.com/package/nock](https://www.npmjs.com/package/nock)](https://www.npmjs.com/package/axios)) - HTTP server mocking and expectations library for Node.js; can be used to test modules that perform HTTP requests in isolation.
 
